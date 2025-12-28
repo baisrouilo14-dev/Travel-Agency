@@ -22,10 +22,16 @@
     header {
       background-color: #004080;
       color: white;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      margin: 1rem 0;
     }
 
     nav a {
-      margin-right: 1rem;
+      margin: 0 1rem;
       color: #004080;
       text-decoration: none;
       font-weight: bold;
@@ -40,6 +46,46 @@
       outline: 3px solid orange;
     }
 
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
     button {
       padding: 0.5rem 1rem;
       font-size: 1rem;
@@ -49,6 +95,16 @@
     footer {
       background-color: #f0f0f0;
       margin-top: 2rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    form input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -66,39 +122,67 @@
   </nav>
 
   <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h2>Discover Your Next Adventure</h2>
+      <p>Accessible travel experiences designed for everyone.</p>
+      <img src="images/beach.jpg" alt="Tropical beach with clear water and palm trees">
+    </section>
+
+    <!-- SERVICES -->
     <section id="services">
       <h2>Our Services</h2>
-      <p>
-        We offer accessible travel planning, flight bookings,
-        hotel reservations, and guided tours for all travelers.
-      </p>
+      <div class="cards">
+        <article class="card">
+          <h3>Flight Booking</h3>
+          <p>Comfortable and accessible flight arrangements.</p>
+        </article>
+
+        <article class="card">
+          <h3>Hotel Reservations</h3>
+          <p>Inclusive hotels suited for all needs.</p>
+        </article>
+
+        <article class="card">
+          <h3>Guided Tours</h3>
+          <p>Enjoy guided experiences with accessibility in mind.</p>
+        </article>
+      </div>
     </section>
 
+    <!-- DESTINATIONS -->
     <section id="destinations">
       <h2>Popular Destinations</h2>
-      <p>
-        Explore beautiful destinations around the world with
-        comfort and ease.
-      </p>
+      <div class="cards">
+        <article class="card">
+          <img src="images/mountains.jpg" alt="Mountain travel destination">
+          <h3>Mountain Escapes</h3>
+        </article>
 
-      <img
-        src="https://via.placeholder.com/300"
-        alt="Illustration representing a travel destination with mountains and sky"
-      />
+        <article class="card">
+          <img src="images/city.jpg" alt="Modern city skyline at night">
+          <h3>City Adventures</h3>
+        </article>
+
+        <article class="card">
+          <img src="images/beach.jpg" alt="Relaxing beach destination">
+          <h3>Beach Getaways</h3>
+        </article>
+      </div>
     </section>
 
+    <!-- CONTACT FORM -->
     <section id="contact">
       <h2>Book Your Trip</h2>
-
       <form>
-        <label for="name">Full name:</label><br />
-        <input id="name" type="text" /><br /><br />
+        <label for="name">Full name:</label>
+        <input id="name" type="text" />
 
-        <label for="email">Email address:</label><br />
-        <input id="email" type="email" /><br /><br />
+        <label for="email">Email address:</label>
+        <input id="email" type="email" />
 
-        <label for="destination">Preferred destination:</label><br />
-        <input id="destination" type="text" /><br /><br />
+        <label for="destination">Preferred destination:</label>
+        <input id="destination" type="text" />
 
         <button type="submit">Request Booking</button>
       </form>
