@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessible Travel Agency</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    header, nav, main, footer {
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+    }
+
+    nav a {
+      margin-right: 1rem;
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:focus,
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    :focus {
+      outline: 3px solid orange;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>World Explorer Travel Agency</h1>
+    <p>Helping everyone travel the world comfortably and accessibly.</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#services">Services</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>
+        We offer accessible travel planning, flight bookings,
+        hotel reservations, and guided tours for all travelers.
+      </p>
+    </section>
+
+    <section id="destinations">
+      <h2>Popular Destinations</h2>
+      <p>
+        Explore beautiful destinations around the world with
+        comfort and ease.
+      </p>
+
+      <img
+        src="https://via.placeholder.com/300"
+        alt="Illustration representing a travel destination with mountains and sky"
+      />
+    </section>
+
+    <section id="contact">
+      <h2>Book Your Trip</h2>
+
+      <form>
+        <label for="name">Full name:</label><br />
+        <input id="name" type="text" /><br /><br />
+
+        <label for="email">Email address:</label><br />
+        <input id="email" type="email" /><br /><br />
+
+        <label for="destination">Preferred destination:</label><br />
+        <input id="destination" type="text" /><br /><br />
+
+        <button type="submit">Request Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 World Explorer Travel Agency</p>
+  </footer>
+</body>
+</html>
